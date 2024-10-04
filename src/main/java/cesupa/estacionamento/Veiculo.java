@@ -1,17 +1,18 @@
 package cesupa.estacionamento;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
+
 
 public class Veiculo {
 	
 	private String placa;
 	private String modelo;
-	private LocalTime hora;
+	private LocalDateTime horaEntrada;
 	
-	public Veiculo(String placa, String modelo, LocalTime hora) {
+	public Veiculo(String placa, String modelo, LocalDateTime hora) {
 		this.placa = placa;
 		this.modelo = modelo;
-		this.hora = hora;
+		this.horaEntrada = hora;
 	}
 
 	public String getPlaca() {
@@ -30,17 +31,18 @@ public class Veiculo {
 		this.modelo = modelo;
 	}
 
-	public LocalTime getHora() {
-		return hora;
+	public LocalDateTime getHoraEntrada() {
+		return horaEntrada;
 	}
 
-	public void setHora(LocalTime hora) {
-		this.hora = hora;
+	public void setHoraEntrada(LocalDateTime hora) {
+		this.horaEntrada = hora;
 	}
+	
 	
 	@Override
 	public String toString() {
-		return placa + ", " + modelo + ", " + hora;
+		return placa + ", " + modelo + ", " + horaEntrada;
 	}
 	
 	
